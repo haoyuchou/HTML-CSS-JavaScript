@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Century Gothic"
+}
+
+header{
+    background: linear-gradient(45deg, #89f7fe, #66a6ff);
+    height: 200vh;
+    background-size: cover;
+    background-position: center;
+
+}
+/*ul{
+    float: right;
+    list-style-type: none;
+    margin-top:15px;
+}*/
+nav ul li{
+    display:inline-block;
+
+}
+ul li a{
+    padding:10px 30px;
+    border:1px solid;
+    color: #F0FFFF;
+    text-decoration:none;
+}
+ul li a:hover{
+    background-color:#FFF;
+    color:#000;
+}
+.signature {
+    float:left;
+}
+.thomas{
+    max-width:1200px;
+    margin: auto;
+}
+/*.carousel-inner{
+    height:75vh;
+    width:75vh;
+    position:relative;
+    top:75px;
+    left:50px;
+}*/
+.carousel-item active{
+    height:50%;
+    width:50%;
+    position:absolute;
+    right:200px;
+
+}
+.carousel-item{
+    height:50%;
+    width:50%;
+}
+.myhobby{
+    position:absolute;
+    right:200px;
+    top:250px;
+    font-size:50px;
+    font-family:"TISA";
+    font-weight:800;
+}
+p{
+    position:absolute;
+    right:80px;
+    top:530px;
+    border:5px solid rgba(255,255,255,0.5);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="activity.css" rel="stylesheet">
+
+        <title>My Webpage</title>
+    </head>
+    <body>
+        <header>
+                <div class="signature">
+                    <img src="signature.jpg">
+                    <h1>Sol Camp Toronto</h1>
+                    <h>During summer 2016, I went to Sol camp Toronto as a student<br>
+                    During summer 2018 and 2019, I went to Sol Camp Toronto as an intern<br>
+                    These are the best experience in my life !!!<br>
+                    The best part is that I got to use English to work<br
+                    > with peoplbre from all over the world
+                    and also make friends from all over the world !!!
+                    </h>
+                    <div class="gallery_box">
+                        <img src="activity2.jpg" id="activity2">
+                        <ul>
+                            <li class="btnn">01</li>
+                            <li class="btnn active">02</li>
+                            <li class="btnn">03</li>
+                            <li class="btnn">04</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <nav>
+                    <ul class='Thomas' style="position:absolute; top: 20px; right:130px;">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="activity.html">activity</a></li>
+                        <li><a href='hobby.html'>hobby</a></li>
+                        <li><a href="food.html">food</a></li>
+                    </ul>
+            </nav>
+        </header>
+        <script>
+            var btnn=document.getElementsByClassName("btnn");
+            var activity2=document.getElementById('activity2');
+            var images= new Array(
+                "activity1.jpg",
+                "activity2.jpg",
+                "activity3.jpg",
+                "activity4.jpg"
+
+                );
+            for(let i=0; i<btnn.length; i++){
+                btnn[i].onclick=function(){
+                    activity2.src=images[i];
+                    let current=document.getElementsByClassName("active");
+                    current[0].className=current[0].className.replace("active","");
+                    this.className += "active";
+                };
+            }
+
+        </script>
+
+
+    </body>
+</html>
