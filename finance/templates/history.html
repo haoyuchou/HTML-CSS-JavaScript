@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/buy" method="post">
+         <div class="form-group">
+            <table>
+                    <thead>
+                        <tr>
+                            <th>symbol</th>
+                            <th>share</th>
+                            <th>bought or sold</th>
+                            <th>price</th>
+                            <th>date</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for value in current_history %}
+                            <tr>
+                                <td>{{value["symbol"]}}</td>
+                                <td>{{value["share"]}}</td>
+                                <td>{{value["b_or_s"]}}</td>
+                                <td>{{value['price']}}</td>
+                                <td>{{value['date']}}</td>
+
+
+                            </tr>
+                        {% endfor %}
+
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                    </tbody>
+
+            </table>
+        </div>
+{% endblock %}
